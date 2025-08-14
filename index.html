@@ -46,13 +46,16 @@
         <div class="border-b border-slate-200 mb-6">
             <nav class="-mb-px flex space-x-6" aria-label="Tabs">
                 <button class="tab-button active-tab whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-target="agenda">
-                    行程與議程
+                    議程
                 </button>
                 <button class="tab-button text-slate-500 hover:text-slate-700 hover:border-slate-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-target="format">
                     課堂進行方式
                 </button>
                 <button class="tab-button text-slate-500 hover:text-slate-700 hover:border-slate-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-target="info">
                     其他重要事項
+                </button>
+                <button class="tab-button text-slate-500 hover:text-slate-700 hover:border-slate-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-target="satisfaction">
+                    滿意度
                 </button>
             </nav>
         </div>
@@ -68,22 +71,61 @@
                             <span class="bg-teal-100 text-teal-800 text-sm font-semibold mr-3 px-2.5 py-0.5 rounded-full">09:30–09:50</span>
                             <span class="text-slate-500 text-sm">(20 分鐘)</span>
                         </div>
-                        <h3 class="font-bold text-lg text-teal-900">A. AI 智慧醫療技能工作坊說明</h3>
+                        <h3 class="font-bold text-lg text-teal-900">A. 林口長庚AI工具應用工作坊說明</h3>
                         <p class="text-slate-600 mt-2">講者：廖部長</p>
                     </div>
-                    <!-- Card 1.2 -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+
+                    <!-- Card 1.2 (Modified to include group agendas and speakers) -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg lg:col-span-2 xl:col-span-3">
                         <div class="flex items-center mb-3">
                             <span class="bg-sky-100 text-sky-800 text-sm font-semibold mr-3 px-2.5 py-0.5 rounded-full">09:50–11:15</span>
                             <span class="text-slate-500 text-sm">(1 小時 25 分鐘)</span>
                         </div>
-                        <h3 class="font-bold text-lg text-sky-900">B. 主題課程 — AI 生成式研究</h3>
-                        <div class="mt-3 space-y-2 text-slate-600">
-                           <p><strong class="text-sky-700">影片組：</strong>曉琪、淑怡、迎真</p>
-                           <p><strong class="text-sky-700">簡報組：</strong>英云、淑雅、詩芸</p>
-                           <p><strong class="text-sky-700">研究組：</strong>汶秀、依玲、宜婷</p>
+                        <h3 class="font-bold text-lg text-sky-900 mb-4">B. 主題課程 — AI 生成式研究</h3>
+                        
+                        <!-- Group Agendas and Speakers -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Card for 簡報組 -->
+                            <div class="bg-amber-50 p-4 rounded-lg">
+                                <h5 class="font-bold text-base text-amber-800 mb-1">AI生成式簡報</h5>
+                                <p class="text-sm text-slate-500 mb-3">講者：<strong class="font-semibold text-slate-600">英云</strong>、淑雅、詩芸</p>
+                                 <ul class="list-decimal list-inside text-slate-600 space-y-1 text-sm">
+                                    <li>AI簡報工具介紹</li>
+                                    <li>從無到有到美：從產出文字到視覺化簡報</li>
+                                    <li>美化設計與圖像整合技巧</li>
+                                    <li>實作練習：簡報、海報、會議記錄</li>
+                                    <li>成果展示與回饋</li>
+                                </ul>
+                            </div>
+                            <!-- Card for 影片組 -->
+                            <div class="bg-sky-50 p-4 rounded-lg">
+                                <h5 class="font-bold text-base text-sky-800 mb-1">AI生成式影片</h5>
+                                <p class="text-sm text-slate-500 mb-3">講者：<strong class="font-semibold text-slate-600">曉琪</strong>、淑怡、迎真</p>
+                                <ul class="list-decimal list-inside text-slate-600 space-y-1 text-sm">
+                                    <li>常見AI podcast以及影片工具入門</li>
+                                    <li>文字轉影片：簡單想法→腳本→影片</li>
+                                    <li>文字轉podcast：腳本→活潑的廣播、訪談</li>
+                                    <li>人聲、字幕與視覺強化技巧</li>
+                                    <li>實作練習：製作醫療或教學Podcast或是影片</li>
+                                    <li>成果展示與回饋</li>
+                                </ul>
+                            </div>
+                            <!-- Card for 研究組 -->
+                            <div class="bg-violet-50 p-4 rounded-lg">
+                                <h5 class="font-bold text-base text-violet-800 mb-1">AI生成式研究</h5>
+                                <p class="text-sm text-slate-500 mb-3">講者：<strong class="font-semibold text-slate-600">汶秀</strong>、依玲、宜婷</p>
+                                 <ul class="list-decimal list-inside text-slate-600 space-y-1 text-sm">
+                                    <li>AI在研究流程中的應用全貌</li>
+                                    <li>挑出自己順手的AI工具</li>
+                                    <li>利用 LLM 協助擬定研究問題與摘要撰寫</li>
+                                    <li>文獻搜尋與整理工具應用</li>
+                                    <li>研究資料初步分析與圖表生成</li>
+                                    <li>成果展示與回饋</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+
                     <!-- Card 1.3 -->
                     <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
                         <div class="flex items-center mb-3">
@@ -102,6 +144,15 @@
                         <h3 class="font-bold text-lg text-rose-900">C. 綜合討論與發表</h3>
                         <p class="text-slate-600 mt-2">各組推派組長報告</p>
                     </div>
+                    <!-- Card 1.5: QR Code -->
+                    <div class="bg-teal-50 p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center justify-center">
+                        <h3 class="font-bold text-lg text-teal-900 mb-3">工作坊資料夾</h3>
+                        <a href="https://drive.google.com/drive/folders/1iVmgRh8oC8X8NNne-IQfdIccdoYtkLlp?usp=sharing" target="_blank" rel="noopener noreferrer">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://drive.google.com/drive/folders/1iVmgRh8oC8X8NNne-IQfdIccdoYtkLlp?usp=sharing" alt="工作坊資料夾 QR Code" class="rounded-lg cursor-pointer">
+                        </a>
+                        <p class="text-teal-800 mt-3 text-center text-sm">掃描或點擊QR Code以上傳檔案或存取工作坊資料</p>
+                        <a href="https://pse.is/7ztmse" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-600 hover:underline mt-2">https://pse.is/7ztmse</a>
+                    </div>
                 </div>
             </div>
 
@@ -114,7 +165,7 @@
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-lg">
                         <h3 class="font-bold text-lg text-slate-800 mb-2">分組與發表</h3>
-                        <p class="text-slate-600">每組約10人，共3組。由推派的組長報告，可共同分工完成作品。<strong class="font-semibold">Coffee Break前需上傳檔案。</strong></p>
+                        <p class="text-slate-600">每組約30人，各組共分3組(每組約10人)。由各組推派的組長報告，可共同分工完成作品。<strong class="font-semibold">Coffee Break前需上傳檔案。</strong></p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-lg">
                         <h3 class="font-bold text-lg text-slate-800 mb-2">學員組成職別</h3>
@@ -189,6 +240,18 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Panel 4: Satisfaction Survey -->
+            <div id="satisfaction" class="tab-panel hidden">
+                <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col items-center justify-center text-center">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">滿意度問卷</h3>
+                    <p class="text-slate-600">此處將放置滿意度問卷的QR Code與連結。</p>
+                    <div class="w-40 h-40 bg-slate-200 rounded-lg mt-4 flex items-center justify-center">
+                        <span class="text-slate-400">QR Code</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
