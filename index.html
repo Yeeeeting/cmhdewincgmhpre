@@ -29,8 +29,8 @@
 <body class="bg-amber-50 text-amber-900 flex flex-col min-h-screen hidden-until-load" onload="document.body.style.visibility='visible'">
 
     <!-- Header Section -->
-    <header class="bg-white shadow-md p-4 md:p-6 sticky top-0 z-20">
-        <div class="max-w-7xl mx-auto">
+    <header class="bg-white shadow-md sticky top-0 z-20">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 pt-4 md:pt-6">
             <h1 class="text-2xl md:text-3xl font-bold text-amber-800">林口長庚AI工具應用工作坊</h1>
             <p class="text-slate-500 mt-1 text-base md:text-lg">日期: 8/16 (六) 9:30 - 12:30</p>
             <div class="flex flex-wrap gap-x-6 gap-y-2 mt-3 text-sm md:text-base">
@@ -38,132 +38,152 @@
                 <p><span class="font-semibold text-slate-600">主講者:</span> 奇美醫院教學部 廖家德部長</p>
             </div>
         </div>
+        <!-- Tab Buttons -->
+        <div class="max-w-7xl mx-auto px-4 md:px-8 mt-4">
+            <div class="border-b border-amber-200">
+                <nav class="-mb-px flex space-x-6" aria-label="Tabs">
+                    <button class="tab-button active-tab whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-target="agenda">
+                        議程
+                    </button>
+                    <button class="tab-button text-amber-900/70 hover:text-amber-700 hover:border-amber-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-target="format">
+                        課堂進行方式
+                    </button>
+                    <button class="tab-button text-amber-900/70 hover:text-amber-700 hover:border-amber-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-target="info">
+                        其他重要事項
+                    </button>
+                    <button class="tab-button text-amber-900/70 hover:text-amber-700 hover:border-amber-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-target="satisfaction">
+                        滿意度
+                    </button>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <!-- Main Tabbed Content -->
     <main class="flex-grow p-4 md:p-8 max-w-7xl mx-auto w-full">
-        <!-- Tab Buttons -->
-        <div class="border-b border-amber-200 mb-6">
-            <nav class="-mb-px flex space-x-6" aria-label="Tabs">
-                <button class="tab-button active-tab whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-target="agenda">
-                    議程
-                </button>
-                <button class="tab-button text-amber-900/70 hover:text-amber-700 hover:border-amber-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-target="format">
-                    課堂進行方式
-                </button>
-                <button class="tab-button text-amber-900/70 hover:text-amber-700 hover:border-amber-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-target="info">
-                    其他重要事項
-                </button>
-                <button class="tab-button text-amber-900/70 hover:text-amber-700 hover:border-amber-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-target="satisfaction">
-                    滿意度
-                </button>
-            </nav>
-        </div>
-
         <!-- Tab Content Panels -->
         <div id="tab-content">
             <!-- Panel 1: Agenda -->
             <div id="agenda" class="tab-panel">
-                <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-                    <!-- Card 1.1 -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-orange-100 text-orange-800 text-sm font-semibold mr-3 px-2.5 py-0.5 rounded-full">09:30–09:50</span>
-                            <span class="text-slate-500 text-sm">(20 分鐘)</span>
-                        </div>
-                        <h3 class="font-bold text-lg text-orange-900">林口長庚AI工具應用工作坊說明</h3>
-                        <p class="text-slate-600 mt-2">講者：廖部長</p>
-                    </div>
-
-                    <!-- Card 1.2 (Modified to include group agendas and speakers) -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg lg:col-span-2 xl:col-span-3">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-amber-100 text-amber-800 text-sm font-semibold mr-3 px-2.5 py-0.5 rounded-full">09:50–11:15</span>
-                            <span class="text-slate-500 text-sm">(1 小時 25 分鐘)</span>
-                        </div>
-                        <h3 class="font-bold text-lg text-amber-900 mb-4">主題課程 — AI 生成式研究</h3>
-                        
-                        <!-- Group Agendas and Speakers -->
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <!-- Card for 簡報組 -->
-                            <div class="bg-amber-100 p-4 rounded-lg flex flex-col">
-                                <h5 class="font-bold text-base text-amber-800 mb-1">AI生成式簡報</h5>
-                                <p class="text-sm text-slate-500 mb-1">講者：<strong class="font-semibold text-slate-600">英云</strong>、淑雅、詩芸</p>
-                                <p class="text-sm text-slate-500 mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657l-5.657 5.657-5.657-5.657a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                                    一般外科討論室
-                                </p>
-                                 <ul class="list-decimal list-inside text-slate-600 space-y-1 text-sm border-t border-amber-200 mt-2 pt-2">
-                                    <li>AI簡報工具介紹</li>
-                                    <li>從無到有到美：從產出文字到視覺化簡報</li>
-                                    <li>美化設計與圖像整合技巧</li>
-                                    <li>實作練習：簡報、海報、會議記錄</li>
-                                    <li>成果展示與回饋</li>
-                                </ul>
+                <div class="relative">
+                    <!-- Vertical Timeline -->
+                    <div class="absolute left-4 top-2 h-full w-0.5 bg-amber-200"></div>
+                    
+                    <!-- Timeline Item 1 -->
+                    <div class="relative pl-12 pb-12">
+                        <div class="absolute left-[10px] top-2 h-5 w-5 rounded-full bg-orange-500 border-4 border-amber-50"></div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-orange-100 text-orange-800 text-sm font-semibold mr-3 px-2.5 py-0.5 rounded-full">09:30–09:50</span>
+                                <span class="text-slate-500 text-sm">(20 分鐘)</span>
                             </div>
-                            <!-- Card for 影片組 -->
-                            <div class="bg-orange-100 p-4 rounded-lg flex flex-col">
-                                <h5 class="font-bold text-base text-orange-800 mb-1">AI生成式影片</h5>
-                                <p class="text-sm text-slate-500 mb-1">講者：<strong class="font-semibold text-slate-600">曉琪</strong>、淑怡、迎真</p>
-                                <p class="text-sm text-slate-500 mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657l-5.657 5.657-5.657-5.657a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                                    內科部5AB討論室
-                                </p>
-                                <ul class="list-decimal list-inside text-slate-600 space-y-1 text-sm border-t border-orange-200 mt-2 pt-2">
-                                    <li>常見AI podcast以及影片工具入門</li>
-                                    <li>文字轉影片：簡單想法→腳本→影片</li>
-                                    <li>文字轉podcast：腳本→活潑的廣播、訪談</li>
-                                    <li>人聲、字幕與視覺強化技巧</li>
-                                    <li>實作練習：製作醫療或教學Podcast或是影片</li>
-                                    <li>成果展示與回饋</li>
-                                </ul>
-                            </div>
-                            <!-- Card for 研究組 -->
-                            <div class="bg-yellow-100 p-4 rounded-lg flex flex-col">
-                                <h5 class="font-bold text-base text-yellow-800 mb-1">AI生成式研究</h5>
-                                <p class="text-sm text-slate-500 mb-1">講者：<strong class="font-semibold text-slate-600">汶秀</strong>、依玲、宜婷</p>
-                                <p class="text-sm text-slate-500 mb-3 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657l-5.657 5.657-5.657-5.657a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                                    整形外科討論室
-                                </p>
-                                 <ul class="list-decimal list-inside text-slate-600 space-y-1 text-sm border-t border-yellow-200 mt-2 pt-2">
-                                    <li>AI在研究流程中的應用全貌</li>
-                                    <li>挑出自己順手的AI工具</li>
-                                    <li>利用 LLM 協助擬定研究問題與摘要撰寫</li>
-                                    <li>文獻搜尋與整理工具應用</li>
-                                    <li>研究資料初步分析與圖表生成</li>
-                                    <li>成果展示與回饋</li>
-                                </ul>
-                            </div>
+                            <h3 class="font-bold text-lg text-orange-900">林口長庚AI工具應用工作坊說明</h3>
+                            <p class="text-slate-600 mt-2">講者：廖部長</p>
                         </div>
                     </div>
 
-                    <!-- Card 1.3 -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold mr-3 px-2.5 py-0.5 rounded-full">11:15–11:30</span>
-                             <span class="text-slate-500 text-sm">(15 分鐘)</span>
+                    <!-- Timeline Item 2 -->
+                    <div class="relative pl-12 pb-12">
+                         <div class="absolute left-[10px] top-2 h-5 w-5 rounded-full bg-amber-500 border-4 border-amber-50"></div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-amber-100 text-amber-800 text-sm font-semibold mr-3 px-2.5 py-0.5 rounded-full">09:50–11:15</span>
+                                <span class="text-slate-500 text-sm">(1 小時 25 分鐘)</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-amber-900 mb-4">主題課程 — AI 生成式研究</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div class="bg-amber-100 p-4 rounded-lg flex flex-col">
+                                    <h5 class="font-bold text-base text-amber-800 mb-1">AI生成式簡報</h5>
+                                    <p class="text-sm text-slate-500 mb-1">講者：<strong class="font-semibold text-slate-600">英云</strong>、淑雅、詩芸</p>
+                                    <p class="text-sm text-slate-500 mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657l-5.657 5.657-5.657-5.657a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                                        一般外科討論室
+                                    </p>
+                                     <ul class="list-decimal list-inside text-slate-600 space-y-1 text-sm border-t border-amber-200 mt-2 pt-2">
+                                        <li>AI簡報工具介紹</li>
+                                        <li>從無到有到美：從產出文字到視覺化簡報</li>
+                                        <li>美化設計與圖像整合技巧</li>
+                                        <li>實作練習：簡報、海報、會議記錄</li>
+                                        <li>成果展示與回饋</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-orange-100 p-4 rounded-lg flex flex-col">
+                                    <h5 class="font-bold text-base text-orange-800 mb-1">AI生成式影片</h5>
+                                    <p class="text-sm text-slate-500 mb-1">講者：<strong class="font-semibold text-slate-600">曉琪</strong>、淑怡、迎真</p>
+                                    <p class="text-sm text-slate-500 mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657l-5.657 5.657-5.657-5.657a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                                        內科部5AB討論室
+                                    </p>
+                                    <ul class="list-decimal list-inside text-slate-600 space-y-1 text-sm border-t border-orange-200 mt-2 pt-2">
+                                        <li>常見AI podcast以及影片工具入門</li>
+                                        <li>文字轉影片：簡單想法→腳本→影片</li>
+                                        <li>文字轉podcast：腳本→活潑的廣播、訪談</li>
+                                        <li>人聲、字幕與視覺強化技巧</li>
+                                        <li>實作練習：製作醫療或教學Podcast或是影片</li>
+                                        <li>成果展示與回饋</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-yellow-100 p-4 rounded-lg flex flex-col">
+                                    <h5 class="font-bold text-base text-yellow-800 mb-1">AI生成式研究</h5>
+                                    <p class="text-sm text-slate-500 mb-1">講者：<strong class="font-semibold text-slate-600">汶秀</strong>、依玲、宜婷</p>
+                                    <p class="text-sm text-slate-500 mb-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657l-5.657 5.657-5.657-5.657a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                                        整形外科討論室
+                                    </p>
+                                     <ul class="list-decimal list-inside text-slate-600 space-y-1 text-sm border-t border-yellow-200 mt-2 pt-2">
+                                        <li>AI在研究流程中的應用全貌</li>
+                                        <li>挑出自己順手的AI工具</li>
+                                        <li>利用 LLM 協助擬定研究問題與摘要撰寫</li>
+                                        <li>文獻搜尋與整理工具應用</li>
+                                        <li>研究資料初步分析與圖表生成</li>
+                                        <li>成果展示與回饋</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="font-bold text-lg text-yellow-900">Coffee Break</h3>
-                        <p class="text-slate-600 mt-2">所有與會者</p>
                     </div>
-                    <!-- Card 1.4 -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-red-100 text-red-800 text-sm font-semibold mr-3 px-2.5 py-0.5 rounded-full">11:30–12:30</span>
-                             <span class="text-slate-500 text-sm">(1 小時)</span>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="relative pl-12 pb-12">
+                         <div class="absolute left-[10px] top-2 h-5 w-5 rounded-full bg-yellow-500 border-4 border-amber-50"></div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold mr-3 px-2.5 py-0.5 rounded-full">11:15–11:30</span>
+                                 <span class="text-slate-500 text-sm">(15 分鐘)</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-yellow-900">Coffee Break</h3>
+                            <p class="text-slate-600 mt-2">所有與會者</p>
                         </div>
-                        <h3 class="font-bold text-lg text-red-900">綜合討論與發表</h3>
-                        <p class="text-slate-600 mt-2">各組推派組長報告</p>
                     </div>
-                    <!-- Card 1.5: QR Code -->
-                    <div class="bg-orange-100 p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col items-center justify-center">
-                        <h3 class="font-bold text-lg text-orange-900 mb-3">工作坊資料夾</h3>
-                        <a href="https://drive.google.com/drive/folders/1iVmgRh8oC8X8NNne-IQfdIccdoYtkLlp?usp=sharing" target="_blank" rel="noopener noreferrer">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://drive.google.com/drive/folders/1iVmgRh8oC8X8NNne-IQfdIccdoYtkLlp?usp=sharing" alt="工作坊資料夾 QR Code" class="rounded-lg cursor-pointer">
-                        </a>
-                        <p class="text-orange-800 mt-3 text-center text-sm">掃描或點擊QR Code以上傳檔案或存取工作坊資料</p>
-                        <a href="https://pse.is/7ztmse" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-600 hover:underline mt-2">https://pse.is/7ztmse</a>
+
+                    <!-- Timeline Item 4 -->
+                    <div class="relative pl-12 pb-12">
+                         <div class="absolute left-[10px] top-2 h-5 w-5 rounded-full bg-red-500 border-4 border-amber-50"></div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-red-100 text-red-800 text-sm font-semibold mr-3 px-2.5 py-0.5 rounded-full">11:30–12:30</span>
+                                 <span class="text-slate-500 text-sm">(1 小時)</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-red-900">綜合討論與發表</h3>
+                            <p class="text-slate-600 mt-2">各組推派組長報告分享及交流討論</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 5 -->
+                     <div class="relative pl-12">
+                        <div class="absolute left-1.5 top-0 h-8 w-8 rounded-full bg-amber-600 text-white flex items-center justify-center border-4 border-amber-50 z-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                            </svg>
+                         </div>
+                        <div class="bg-orange-100 p-6 rounded-xl shadow-lg flex flex-col items-center justify-center">
+                            <h3 class="font-bold text-lg text-orange-900 mb-3">工作坊資料夾</h3>
+                            <a href="https://drive.google.com/drive/folders/1iVmgRh8oC8X8NNne-IQfdIccdoYtkLlp?usp=sharing" target="_blank" rel="noopener noreferrer">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://drive.google.com/drive/folders/1iVmgRh8oC8X8NNne-IQfdIccdoYtkLlp?usp=sharing" alt="工作坊資料夾 QR Code" class="rounded-lg cursor-pointer">
+                            </a>
+                            <p class="text-orange-800 mt-3 text-center text-sm">掃描或點擊QR Code以上傳檔案或存取工作坊資料</p>
+                            <a href="https://pse.is/7ztmse" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-600 hover:underline mt-2">https://pse.is/7ztmse</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -269,7 +289,7 @@
                         </div>
                         <div>
                             <h3 class="font-bold text-lg text-slate-800">行政進度</h3>
-                            <p class="text-slate-600 mt-1">公文尚待人資主任簽核。</p>
+                            <p class="text-slate-600 mt-1">即將完成</p>
                         </div>
                     </div>
                 </div>
