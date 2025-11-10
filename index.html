@@ -26,16 +26,28 @@
         }
     </style>
 </head>
-<body class="bg-amber-50 text-amber-900 flex flex-col min-h-screen hidden-until-load" onload="document.body.style.visibility='visible'">
+<body class="bg-amber-50 text-amber-900 min-h-screen hidden-until-load" onload="document.body.style.visibility='visible'">
+
+    <!-- Fixed Background Watermark (REMOVED) -->
 
     <!-- Header Section -->
-    <header class="bg-white shadow-md sticky top-0 z-20">
+    <header class="bg-white shadow-md sticky top-0 z-20 relative">
         <div class="max-w-7xl mx-auto px-4 md:px-8 pt-4 md:pt-6">
-            <h1 class="text-2xl md:text-3xl font-bold text-amber-800">林口長庚AI工具應用工作坊</h1>
-            <p class="text-slate-500 mt-1 text-base md:text-lg">日期: 8/16 (六) 9:00 - 12:30</p>
-            <div class="flex flex-wrap gap-x-6 gap-y-2 mt-3 text-sm md:text-base">
-                <p><span class="font-semibold text-slate-600">主持人:</span> 林口長庚醫學教育研究中心 張玉喆副主任</p>
-                <p><span class="font-semibold text-slate-600">主講者:</span> 奇美醫院教學部 廖家德部長</p>
+            <div class="flex flex-col md:flex-row justify-between md:items-start">
+                <!-- Text Content -->
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-bold text-amber-800">林口長庚AI工具應用工作坊</h1>
+                    <p class="text-slate-500 mt-1 text-base md:text-lg">日期: 8/16 (六) 9:00 - 12:30</p>
+                    <div class="flex flex-wrap gap-x-6 gap-y-2 mt-3 text-sm md:text-base">
+                        <p><span class="font-semibold text-slate-600">主持人:</span> 林口長庚醫學教育研究中心 張玉喆副主任</p>
+                        <p><span class="font-semibold text-slate-600">主講者:</span> 奇美醫院教學部 廖家德部長</p>
+                    </div>
+                </div>
+                <!-- Image and Tagline -->
+                <div class="mt-4 md:mt-0 md:ml-6 flex-shrink-0 flex flex-col items-center">
+                    <img src="https://raw.githubusercontent.com/Yeeeting/cmhdewincgmhpre/main/LOGOwithtitle.png" alt="教學部LOGO" class="h-16 md:h-20 w-auto" onerror="this.style.display='none'">
+                    <p class="text-sm text-slate-600 font-semibold mt-2">全人、適性、創新</p>
+                </div>
             </div>
         </div>
         <!-- Tab Buttons -->
@@ -44,6 +56,9 @@
                 <nav class="-mb-px flex space-x-6" aria-label="Tabs">
                     <button class="tab-button active-tab whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-target="agenda">
                         議程
+                    </button>
+                     <button class="tab-button text-amber-900/70 hover:text-amber-700 hover:border-amber-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-target="groups">
+                        分組名單
                     </button>
                     <button class="tab-button text-amber-900/70 hover:text-amber-700 hover:border-amber-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-target="format">
                         課堂進行方式
@@ -60,7 +75,7 @@
     </header>
 
     <!-- Main Tabbed Content -->
-    <main class="flex-grow p-4 md:p-8 max-w-7xl mx-auto w-full">
+    <main class="p-4 md:p-8 max-w-7xl mx-auto w-full relative z-10">
         <!-- Tab Content Panels -->
         <div id="tab-content">
             <!-- Panel 1: Agenda -->
@@ -199,7 +214,156 @@
                 </div>
             </div>
 
-            <!-- Panel 2: Workshop Format -->
+            <!-- Panel 2: Group Lists -->
+            <div id="groups" class="tab-panel hidden">
+                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <div class="flex flex-wrap items-baseline justify-between mb-4">
+                            <h3 class="text-xl font-bold text-amber-800">簡報組</h3>
+                            <span class="text-xs text-slate-500">醫師:20%, 護理師:16.7%, 藥師:16.7%, 行政:23.3%, 其他:23.3%</span>
+                        </div>
+                        <div class="bg-amber-100 p-4 rounded-xl shadow-lg">
+                            <table class="w-full text-sm text-left text-black border-collapse border border-slate-300">
+                                <thead class="text-xs text-black uppercase bg-amber-200/50">
+                                    <tr>
+                                        <th scope="col" class="border border-slate-300 px-4 py-3">組別</th>
+                                        <th scope="col" class="border border-slate-300 px-4 py-3">姓名</th>
+                                        <th scope="col" class="border border-slate-300 px-4 py-3">單位</th>
+                                        <th scope="col" class="border border-slate-300 px-4 py-3">職稱</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">王安怡</td><td class="border border-slate-300 px-4 py-2">臨床藥學科</td><td class="border border-slate-300 px-4 py-2">藥師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">王俊力</td><td class="border border-slate-300 px-4 py-2">心臟血管內科系</td><td class="border border-slate-300 px-4 py-2">醫師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">江俐慧</td><td class="border border-slate-300 px-4 py-2">臨床藥學科</td><td class="border border-slate-300 px-4 py-2">藥師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">余沁潔</td><td class="border border-slate-300 px-4 py-2">內科第五加護病房</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">周逸萍</td><td class="border border-slate-300 px-4 py-2">營養治療科</td><td class="border border-slate-300 px-4 py-2">營養師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">林稚涵</td><td class="border border-slate-300 px-4 py-2">一般科</td><td class="border border-slate-300 px-4 py-2">PGY</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">陳厚任</td><td class="border border-slate-300 px-4 py-2">人力資源發展部</td><td class="border border-slate-300 px-4 py-2">行政人員</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">鄭宇恬</td><td class="border border-slate-300 px-4 py-2">行政助理組(外)</td><td class="border border-slate-300 px-4 py-2">行政人員</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">鄭慕寰</td><td class="border border-slate-300 px-4 py-2">品管課</td><td class="border border-slate-300 px-4 py-2">行政人員</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">孫銘輝</td><td class="border border-slate-300 px-4 py-2">眼神經科</td><td class="border border-slate-300 px-4 py-2">醫師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">徐雯娟</td><td class="border border-slate-300 px-4 py-2">護理部部務室</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">徐慧實</td><td class="border border-slate-300 px-4 py-2">藥劑部</td><td class="border border-slate-300 px-4 py-2">藥師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">張中杰</td><td class="border border-slate-300 px-4 py-2">牙周病科</td><td class="border border-slate-300 px-4 py-2">醫師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">張仲兒</td><td class="border border-slate-300 px-4 py-2">健康管理科護理組</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">張雅芝</td><td class="border border-slate-300 px-4 py-2">中醫部</td><td class="border border-slate-300 px-4 py-2">醫師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">張博茹</td><td class="border border-slate-300 px-4 py-2">一般外科系(研)</td><td class="border border-slate-300 px-4 py-2">研究人員</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">陳雅惠</td><td class="border border-slate-300 px-4 py-2">營養治療科</td><td class="border border-slate-300 px-4 py-2">營養師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">陳靖玟</td><td class="border border-slate-300 px-4 py-2">人力資源發展部</td><td class="border border-slate-300 px-4 py-2">行政人員</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">董惠君</td><td class="border border-slate-300 px-4 py-2">品管課</td><td class="border border-slate-300 px-4 py-2">行政人員</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">游佳玲</td><td class="border border-slate-300 px-4 py-2">臨床藥學科</td><td class="border border-slate-300 px-4 py-2">藥師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">黃子芸</td><td class="border border-slate-300 px-4 py-2">品管課</td><td class="border border-slate-300 px-4 py-2">行政人員</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">黃玉玲</td><td class="border border-slate-300 px-4 py-2">檢驗醫學部品保教學組</td><td class="border border-slate-300 px-4 py-2">醫檢師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">黃婷榆</td><td class="border border-slate-300 px-4 py-2">血液科(研)</td><td class="border border-slate-300 px-4 py-2">研究人員</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">劉倬昊</td><td class="border border-slate-300 px-4 py-2">急重症神經外科</td><td class="border border-slate-300 px-4 py-2">醫師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">賴彥儒</td><td class="border border-slate-300 px-4 py-2">不分科專科護理師</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">謝佩蓉</td><td class="border border-slate-300 px-4 py-2">安全衛生組</td><td class="border border-slate-300 px-4 py-2">行政人員</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">蘇芳玉</td><td class="border border-slate-300 px-4 py-2">臨床藥學科</td><td class="border border-slate-300 px-4 py-2">藥師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">江金英</td><td class="border border-slate-300 px-4 py-2">護理部部務室</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">陳韻如</td><td class="border border-slate-300 px-4 py-2">內科部</td><td class="border border-slate-300 px-4 py-2">醫師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">鄭小芬</td><td class="border border-slate-300 px-4 py-2">研究區</td><td class="border border-slate-300 px-4 py-2">研究人員</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap items-baseline justify-between mb-4">
+                            <h3 class="text-xl font-bold text-amber-800">影片組</h3>
+                            <span class="text-xs text-slate-500">護理師:39.1%, 藥師:21.7%, 研究員:13.0%, 其他:26.1%</span>
+                        </div>
+                        <div class="bg-orange-100 p-4 rounded-xl shadow-lg">
+                             <table class="w-full text-sm text-left text-black border-collapse border border-slate-300">
+                                <thead class="text-xs text-black uppercase bg-orange-200/50">
+                                    <tr>
+                                        <th scope="col" class="border border-slate-300 px-4 py-3">組別</th>
+                                        <th scope="col" class="border border-slate-300 px-4 py-3">姓名</th>
+                                        <th scope="col" class="border border-slate-300 px-4 py-3">單位</th>
+                                        <th scope="col" class="border border-slate-300 px-4 py-3">職稱</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">許昭嫻</td><td class="border border-slate-300 px-4 py-2">教材課</td><td class="border border-slate-300 px-4 py-2">行政人員</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">王彩茹</td><td class="border border-slate-300 px-4 py-2">腎臟科(研)</td><td class="border border-slate-300 px-4 py-2">研究人員</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">王湞雅</td><td class="border border-slate-300 px-4 py-2">肝臟器官移植加護病房</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">王意雅</td><td class="border border-slate-300 px-4 py-2">化學治療室</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">吳竹芳</td><td class="border border-slate-300 px-4 py-2">外科第五加護病房</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">吳俊賢</td><td class="border border-slate-300 px-4 py-2">六樓C區護理站</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">吳振德</td><td class="border border-slate-300 px-4 py-2">急重症影像診療科</td><td class="border border-slate-300 px-4 py-2">醫師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">吳益銘</td><td class="border border-slate-300 px-4 py-2">營養治療科</td><td class="border border-slate-300 px-4 py-2">營養師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">李宓</td><td class="border border-slate-300 px-4 py-2">九樓B區護理站</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">洪筠茹</td><td class="border border-slate-300 px-4 py-2">林口感染管制組</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">洪靖茹</td><td class="border border-slate-300 px-4 py-2">門診護理二組</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">洪睿</td><td class="border border-slate-300 px-4 py-2">動作障礙科</td><td class="border border-slate-300 px-4 py-2">醫師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">許惇惠</td><td class="border border-slate-300 px-4 py-2">腎臟科(研)</td><td class="border border-slate-300 px-4 py-2">研究人員</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">陳淑真</td><td class="border border-slate-300 px-4 py-2">癌症中心</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">陳雅芳</td><td class="border border-slate-300 px-4 py-2">健康管理科護理組</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">黃忠翠</td><td class="border border-slate-300 px-4 py-2">兒童重症加護科(研)</td><td class="border border-slate-300 px-4 py-2">研究人員</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">黃柏盛</td><td class="border border-slate-300 px-4 py-2">藥劑科</td><td class="border border-slate-300 px-4 py-2">藥師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">黃湘</td><td class="border border-slate-300 px-4 py-2">營養治療科</td><td class="border border-slate-300 px-4 py-2">營養師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">楊千辰</td><td class="border border-slate-300 px-4 py-2">教材課</td><td class="border border-slate-300 px-4 py-2">行政人員</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">楊佩蓁</td><td class="border border-slate-300 px-4 py-2">藥劑部</td><td class="border border-slate-300 px-4 py-2">藥師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">劉育辰</td><td class="border border-slate-300 px-4 py-2">藥劑部</td><td class="border border-slate-300 px-4 py-2">藥師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">蔡珮君</td><td class="border border-slate-300 px-4 py-2">十一樓C區護理站</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">鄧佩如</td><td class="border border-slate-300 px-4 py-2">八樓G區護理站</td><td classDele... existing code ...
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                     <div>
+                        <div class="flex flex-wrap items-baseline justify-between mb-4">
+                            <h3 class="text-xl font-bold text-amber-800">研究組</h3>
+                            <span class="text-xs text-slate-500">醫師:23.3%, 護理師:20%, 研究員:13.3%, 藥師:10%, 其他:33.4%</span>
+                        </div>
+                        <div class="bg-yellow-100 p-4 rounded-xl shadow-lg">
+                             <table class="w-full text-sm text-left text-black border-collapse border border-slate-300">
+                                <thead class="text-xs text-black uppercase bg-yellow-200/50">
+                                    <tr>
+                                        <th scope="col" class="border border-slate-300 px-4 py-3">組別</th>
+                                        <th scope="col" class="border border-slate-300 px-4 py-3">姓名</th>
+                                        <th scope="col" class="border border-slate-300 px-4 py-3">單位</th>
+                                        <th scope="col" class="border border-slate-300 px-4 py-3">職稱</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">王晉亮</td><td class="border border-slate-300 px-4 py-2">肺腫瘤及內視鏡科</td><td class="border border-slate-300 px-4 py-2">醫師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">史紋媛</td><td class="border border-slate-300 px-4 py-2">醫教委員會</td><td class="border border-slate-300 px-4 py-2">醫學生</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">巫柏霖</td><td class="border border-slate-300 px-4 py-2">牙周病科</td><td class="border border-slate-300 px-4 py-2">醫師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">李嘉蓉</td><td class="border border-slate-300 px-4 py-2">一般科</td><td class="border border-slate-300 px-4 py-2">PGY</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">周莉芳</td><td class="border border-slate-300 px-4 py-2">腎臟醫學研究中心</td><td class="border border-slate-300 px-4 py-2">研究人員</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">許婉玲</td><td class="border border-slate-300 px-4 py-2">林口資材課</td><td class="border border-slate-300 px-4 py-2">行政人員</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">林煥堂</td><td class="border border-slate-300 px-4 py-2">神經麻醉科</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">曾素美</td><td class="border border-slate-300 px-4 py-2">護理部部務室</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">施欣妮</td><td class="border border-slate-300 px-4 py-2">藥事管理部</td><td class="border border-slate-300 px-4 py-2">藥師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">1</td><td class="border border-slate-300 px-4 py-2">張瑀玲</td><td class="border border-slate-300 px-4 py-2">七樓C區護理站</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">孫麒旭</td><td class="border border-slate-300 px-4 py-2">直腸肛門科</td><td class="border border-slate-300 px-4 py-2">醫師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">商舒婷</td><td class="border border-slate-300 px-4 py-2">不分科專科護理師</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">張凱程</td><td class="border border-slate-300 px-4 py-2">藥劑部</td><td class="border border-slate-300 px-4 py-2">藥師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">彭沛語</td><td class="border border-slate-300 px-4 py-2">護理部部務室</td><td class_... existing code ...
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">張麗玲</td><td class="border border-slate-300 px-4 py-2">營養治療科</td><td class="border border-slate-300 px-4 py-2">營養師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">邱凱斌</td><td class="border border-slate-300 px-4 py-2">心臟血管內科系</td><td class="border border-slate-300 px-4 py-2">醫師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">許祐寧</td><td class="border border-slate-300 px-4 py-2">血液科(研)</td><td class="border border-slate-300 px-4 py-2">研究人員</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">郭美蘭</td><td class="border border-slate-300 px-4 py-2">呼吸治療科</td><td class="border border-slate-300 px-4 py-2">呼吸治療師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">楊佳儒</td><td class="border border-slate-300 px-4 py-2">精準醫學檢驗中心</td><td class="border border-slate-300 px-4 py-2">醫檢師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">2</td><td class="border border-slate-300 px-4 py-2">陳柏安</td><td class="border border-slate-300 px-4 py-2">急重症神經外科</td><td class="border border-slate-300 px-4 py-2">醫師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">陳益程</td><td class="border border-slate-300 px-4 py-2">胃腸肝膽科系</td><td class="border border-slate-300 px-4 py-2">醫師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">施允方</td><td class="border border-slate-300 px-4 py-2">一般科</td><td class="border border-slate-300 px-4 py-2">PGY</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">黃婉琴</td><td class="border border-slate-300 px-4 py-2">營養治療科</td><td class="border border-slate-300 px-4 py-2">營養師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">許志杰</td><td class="border border-slate-300 px-4 py-2">一般外科</td><td class="border border-slate-300 px-4 py-2">醫師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">蕭靜芝</td><td class="border border-slate-300 px-4 py-2">呼吸治療科</td><td class="border border-slate-300 px-4 py-2">呼吸治療師</td></tr>
+                                    <tr><td classDele... existing code ...
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">廖庭瑩</td><td class="border border-slate-300 px-4 py-2">腦功能暨癲癇科</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">鄭青青</td><td class="border border-slate-300 px-4 py-2">護理部部務室</td><td class="border border-slate-300 px-4 py-2">護理師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">蕭婉玲</td><td class="border border-slate-300 px-4 py-2">臨床藥學科</td><td class="border border-slate-300 px-4 py-2">藥師</td></tr>
+                                    <tr><td class="border border-slate-300 px-4 py-2">3</td><td class="border border-slate-300 px-4 py-2">鍾達瑋</td><td class="border border-slate-300 px-4 py-2">一般外科及乳房外科</td><td class="border border-slate-300 px-4 py-2">醫師</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+
+            <!-- Panel 3: Workshop Format -->
             <div id="format" class="tab-panel hidden">
                 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
                     <div class="bg-white p-6 rounded-xl shadow-lg">
@@ -219,7 +383,7 @@
                             </svg>
                             分組與發表
                         </h3>
-                        <p class="text-slate-600">每組約30人，各組共分3組(每組約10人)。由各組推派的組長報告，可共同分工完成作品。<strong class="font-semibold">Coffee Break前需上傳檔案。</strong></p>
+                        <p class="text-slate-600">與會者共計87人，每組約30人，各組再分3組(每組約10人)。由各組推派的組長報告，可共同分工完成作品，提醒發表需上傳檔案。</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-lg">
                         <h3 class="font-bold text-lg text-slate-800 mb-2 flex items-center">
@@ -246,13 +410,13 @@
                         <ul class="list-none text-slate-600 space-y-2 border-t border-slate-200 pt-3">
                             <li><strong>影片組:</strong><br>醫學大樓 5樓 內科部5AB討論室</li>
                             <li class="pt-1"><strong>簡報組:</strong><br>醫學大樓 5樓 一般外科討論室</li>
-                            <li class="pt-1"><strong>研究組:</strong><br>醫學大樓 5樓 整形外科討論室</li>
+                            <li class="pt-1"><strong>研究組:</strong><br>醫學大M... existing code ...
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <!-- Panel 3: Important Info -->
+            <!-- Panel 4: Important Info -->
             <div id="info" class="tab-panel hidden">
                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="bg-white p-6 rounded-xl shadow-lg flex items-start space-x-4">
@@ -266,6 +430,8 @@
                             <h3 class="font-bold text-lg text-slate-800">交通方式</h3>
                             <p class="text-slate-600 mt-1">高鐵班次606 (7:13-8:36)。</p>
                             <p class="text-slate-600 mt-1">林口長庚將派車至桃園高鐵站接送同仁，車程約30-40分鐘。</p>
+                            <p class="text-slate-600 mt-1"><span class="font-semibold">等待出口：</span>桃園高鐵站8號出口</p>
+                            <p class_... existing code ...
                         </div>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-lg flex items-start space-x-4">
@@ -300,16 +466,16 @@
                         </div>
                         <div>
                             <h3 class="font-bold text-lg text-slate-800">行政進度</h3>
-                            <p class="text-slate-600 mt-1">即將完成</p>
+                            <p class="text-slate-600 mt-1">公文流程已完成</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Panel 4: Satisfaction Survey -->
+            <!-- Panel 5: Satisfaction Survey -->
             <div id="satisfaction" class="tab-panel hidden">
                 <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col items-center justify-center text-center">
-                    <h3 class="text-xl font-bold text-slate-800 mb-4">滿意度問卷</h3>
+                    <h3 class... existing code ...
                     <p class="text-slate-600 mb-4">您的回饋是我們進步的動力，請掃描或點擊QR Code填寫問卷，感謝您的參與！</p>
                     <a href="https://forms.gle/AWDpXmFgcTmFPfad9" target="_blank" rel="noopener noreferrer">
                         <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://forms.gle/AWDpXmFgcTmFPfad9" alt="滿意度問卷 QR Code" class="rounded-lg cursor-pointer">
